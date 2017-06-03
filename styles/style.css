@@ -1,9 +1,8 @@
 html, body{
   margin: 0;
   padding-left: 0;
-  background-color: GhostWhite; 
-  	font-family:Courier, sans-serif;
- 
+  background-color: White; 
+  font-family:Courier, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #7b7b7a;
@@ -25,7 +24,7 @@ body.cursorProgress {
   height: 100%;
   width: 10%; 
   float:left;  
-  background-color: GhostWhite; 
+  background-color: White; 
   position: fixed;  
 }
 
@@ -39,7 +38,7 @@ body.cursorProgress {
 
 #nav{
   top: 0px;
-  background-color: GhostWhite; 
+  background-color: White; 
   padding: 0px 0px 0px 10%;
 }
 
@@ -52,20 +51,12 @@ body.cursorProgress {
 	 line-height: 1;     
      }
      
-#nav .clicked a {
-		color: magenta;
+#nav .clicked a, #nav .root .clicked {
+		color: grey;
      }
-	 
-#nav .root .clicked{
-	color: magenta;
-}
 
-#nav a:hover{
+#nav a:hover, #nav .root-name:hover{
   color: SlateGray ;
-}
-
-#nav .root-name:hover{
-	color: SlateGray ;
 }
 
 #nav a{
@@ -94,7 +85,7 @@ body.cursorProgress {
 
 #container {
 	margin: 0 auto; 
-    background-color: GhostWhite; 
+    background-color: White; 
 	width:80%;
 	text-align: center;
 }
@@ -146,7 +137,17 @@ text-align:center;
 	font-size:120%;
 	color: #262626;
 }
-/* Container styles
+
+.firstImage{
+	 margin-left: auto;
+    margin-right: auto;
+	margin-top:4%;
+	 width: 760px;
+    height: auto;
+	display: block;
+}
+
+/* Gallery styles
 ===========================*/
 .gallery{
 	padding-top:1%;
@@ -156,6 +157,17 @@ text-align:center;
 .gallery a{
 	display: inline-block;
 }
+
+.myClose{
+	top: 0px;
+	right: -4px;
+	height: 20px;
+    width: 20px;
+	background: url('imgs/closeCross.jpg') no-repeat;
+}
+
+
+
 @media only screen and (max-width: 320px) 
 {
 	
@@ -227,8 +239,11 @@ text-align:center;
 		
 
 
-		#nav li {
-			font-size: 1em; 
+		#nav>li {
+			font-size: 1.2em; 
+		}
+		submenu-nav>li{
+			font-size: 1em;
 		}
 		
 		#nav{
@@ -237,9 +252,9 @@ text-align:center;
 		
 		#navside {
 
-  width: 120px; }
+			width: 120px; }
 		
-}
+		}
 
 @media only screen and (min-width: 1400px){
 	

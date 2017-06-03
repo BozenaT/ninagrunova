@@ -62,7 +62,10 @@ $(document).ready(function() {
 				locked: false,
 				}
 		},
-		padding:"0"
+		padding:"0",
+		    tpl: {
+        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
+    }
 	});
 
 
