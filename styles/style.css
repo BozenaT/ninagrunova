@@ -1,8 +1,10 @@
+
+
 html, body{
   margin: 0;
   padding-left: 0;
   background-color: White; 
-  font-family:Courier, sans-serif;
+font-family: "Source Code Pro", "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #7b7b7a;
@@ -14,35 +16,32 @@ html, body{
   height:100%;
 }
 
-body.cursorProgress {
-  cursor: progress;
-}
 /* Menu styles
 ===========================*/
-#navside {
-	overflow-x: hidden;
-  height: 100%;
-  width: 10%; 
-  float:left;  
-  background-color: White; 
-  position: fixed;  
+.mobile-menu-button{
+		background: url('../images/menu-icon1.png') no-repeat;
+		height:30px;
+		width:30px;
+		margin-top:3px;
+		margin-left:3px;
+		cursor: pointer;
+		z-index:1;
 }
 
-.notScroll{
-	overflow-y: hidden;
+.navside {
+height: 100%;
+float:left;  
+position: fixed; 
+z-index:1;
+overflow-x: hidden;
 }
 
-.scroll{
-	overflow-y: auto;
+.nav{
+  top: 0;
+  padding: 0 0 0 15px;
 }
 
-#nav{
-  top: 0px;
-  background-color: White; 
-  padding: 0px 0px 0px 10%;
-}
-
-#nav li {
+.nav li{
 	 width: 100%;
 	 margin-bottom:2px;
 	 list-style:none;
@@ -51,84 +50,117 @@ body.cursorProgress {
 	 line-height: 1;     
      }
      
-#nav .clicked a, #nav .root .clicked {
+.nav .clicked a, .nav .root .clicked {
 		color: grey;
      }
 
-#nav a:hover, #nav .root-name:hover{
-  color: SlateGray ;
+.nav a:hover, .nav .root-name:hover{
+  color: DarkGray ;
 }
 
-#nav a{
+.nav a{
 	text-decoration:none;
     color:black;
 }
 
-#nav .root{
+.nav .root{
 	text-decoration:none;
     color:black;
 }
 
-#submenu-nav{
-	padding: 0px 0px 0px 10%;
+.submenu-nav{
+	padding: 0 0 0 10%;
 	width:100%;
 }
 
-.hidden { display: none; }
+.hidden {display:none;}
+
+.submenu-nav>li{
+	margin-bottom:5px;
+	line-height: 1; 
+}
 
 /* Container styles
 ===========================*/
-#c{
-	margin-left: auto;
-    width:90%;
+
+.c{
+	z-index:0;
 }
 
-#container {
+.container {
+	position:relative;
 	margin: 0 auto; 
-    background-color: White; 
-	width:80%;
+	width:750px;
 	text-align: center;
 }
 
-#container h1 { 
+.welcomePage{
+	position:relative;
+	margin: 0 auto; 
+	width:750px;
+	height: 90%;
+	text-align: center;
+}
+
+
+h1  { 
 margin-top: 20px;
 text-align:center;
- color:#262626;
- font-weight: 100;
+ color:#424242;
+ font-weight: 500;
+ text-decoration: underline;
+ }
+ 
+ h2  { 
+margin-top: 20px;
+text-align:center;
+ color:#424242;
+ font-weight: 500;
  text-decoration: underline;
  }
 
-#container .image{
+.container .image{
     width: 645px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
     display: block;
 }
 
+.container .location{
 
-#container .description{
+    margin-bottom: 30px;
+
+}
+
+.lazy {
+	display: block;
+}
+
+ .description{
 	margin-left: auto;
     margin-right: auto;
-	font: italic bold 12px/30px 'Helvetica Neue', sans-serif; 
+	font-size:90%;
+	color:grey;
+	
+}
+.container .location{
+	margin-left: auto;
+    margin-right: auto;
 	font-size:90%;
     margin-top: 0;
-	line-height:0px
 }
 
-
-#container .iframe{
+.container iframe{
 	 margin-left: auto;
      margin-right: auto;
-	 margin-top: 10px;
-	 display: block;
-	 width: 420px; 
-	 height: 280px;
+	 margin-top: 40px;
+	 
 }
 
-#container p {
+.container p {
 	width : 700px;
 	margin-left: auto;
     margin-right: auto;
@@ -139,12 +171,29 @@ text-align:center;
 }
 
 .firstImage{
-	 margin-left: auto;
-    margin-right: auto;
-	margin-top:4%;
-	 width: 760px;
-    height: auto;
-	display: block;
+max-height: 100%;
+max-width: 100%;
+width: auto;
+height: auto;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+
+.fancybox{
+		text-decoration: none;
+}
+
+.mezeraImage{
+	margin-bottom:30px !important;
+}
+
+audio{
+	margin-top:20px;
+	margin-bottom:20px;
 }
 
 /* Gallery styles
@@ -159,7 +208,7 @@ text-align:center;
 }
 
 .myClose{
-	top: 0px;
+	top: 0;
 	right: -4px;
 	height: 20px;
     width: 20px;
@@ -168,97 +217,185 @@ text-align:center;
 
 
 
-@media only screen and (max-width: 320px) 
+@media only screen and (min-width: 0) and (max-width:730px)
 {
-	
-	    #container p
+		
+		.container 
+		{ 
+			width:95%;
+		}
+		
+		.welcomePage{
+			width:95%;
+		}
+		
+	    .container p
 		{ 
 			font-size: 90%;
-			 width:100%;
-		}
-		#container .image{
 			width:100%;
 		}
-		#container .iframe{
-		width: 200px;
-		height: 120px;
+		
+		.container .image{
+			width:100%;
 		}
-		#container h1 {
+		
+		.container iframe{
+			width:80%;	
+			height: 130px;
+		}
+		
+		.container h1 {
 			line-height: 120%;
 		}
 
-#nav li {
-	 font-size: 80%; 
-     }
-}
-
-@media only screen and (min-width: 320px) and (max-width:950px)
-{
-	
-	   #container p
-		{ 
-			font-size: 100%;
-			 width:95%;
+		.nav li {
+			font-size: 1.3em;
 		}
 		
-		#container .image{
+		.navside {
+			background-color:rgba(255, 255, 255, 0.96);
+			width: 100%;
+			height: 90%;			
+			/*border:3px black solid;*/
+		}
+		
+		.c{
+			margin-left: 0;
+		}
+		
+		 .firstImage{
+			width: 100%;
+			margin-top: 15%; 
+		}
+}
+
+@media only screen and (min-width: 730px) and (max-width:950px)
+{
+	
+	   .container p
+		{ 
+			font-size: 100%;
+			width:500px;
+		}
+		
+		.container .image{
 			width: 95%;
 		}
 		
-		#container .iframe{
-		width: 300px;
-		height: 200px;
+		.container iframe{
+			width: 450px;
+			height: 320px;
 		}
 		
-		#container h1 {
+		.container h1 {
 			line-height: 120%;
 		}
 
-		#nav li {
+		.nav li {
 			font-size: 100%; 
+		}
+		.navside {
+			width: 250px; 
+			}
+		.c{
+			margin-left: 150px;
+		}
+		
+		 .firstImage{
+			width: 500px;
+			margin-top: 5%; 
 		}
 }
 
-@media only screen and (min-width: 950px) and (max-width:1400px)
+
+
+@media only screen and (min-width: 950px) and (max-width: 1400px)
 {
-	
-		#container p
+		.firstImage{
+			width: 600px;
+			margin-top: 5%; 
+		}
+		
+		.container p
 		{ 
 			font-size: 110%;
 			width:660px;
 		}
 		
-		#container .image{
+		.container .image{
 			width: 645px;
 		}
 		
-		#container .iframe{
-		width: 450px;
-		height: 320px;
+		.container iframe{
+			width: 450px;
+			height: 320px;
 		}
-		
 
-
-		#nav>li {
+		.nav>li {
 			font-size: 1.2em; 
 		}
+		
 		submenu-nav>li{
 			font-size: 1em;
 		}
 		
-		#nav{
+		.nav{
 			padding-left: 1em;
 		}
 		
-		#navside {
+		.navside {		
+			width: 200px; 
+			}
+			
+		.c{
+			margin-left: 150px;
+		}
+}
 
-			width: 120px; }
 		
+@media only screen and (min-width: 1400px){
+		
+		 .firstImage{
+			width: 900px;
+			margin-top: 20%;
+			
 		}
 
-@media only screen and (min-width: 1400px){
-	
-	
-	
+		.container p
+		{ 
+			width:750px;
+			font-size: 120%;
+		}
+		
+		.container .image{
+			width: 645px;
+		}
+		
+		.container iframe{
+			width: 650px;
+			height: 420px;
+		}
+
+		.nav>li {
+			font-size: 1.2em; 
+		}
+		
+		submenu-nav>li{
+			font-size: 1em;
+		}
+		
+		.nav{
+			padding-left: 1em;
+		}
+		
+		.navside {
+			width: 200px;
+		}
+			
+		.c{	
+			padding-right: 5%;
+			margin-left: 150px;
+		}
+		
 	
 }
