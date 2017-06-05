@@ -4,9 +4,9 @@ html, body{
   margin: 0;
   padding-left: 0;
   background-color: White; 
-font-family: "Source Code Pro", "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 400; 
   font-style: normal;
-  font-weight: 400;
   color: #7b7b7a;
   font-size: 12px;
   line-height: 18px;
