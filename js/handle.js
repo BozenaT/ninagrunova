@@ -58,9 +58,9 @@ $(document).ready(function() {
 					height2 =  Math.round(windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.01));
 					height1 = Math.round((windowH/100)*20);
 					if($('#container').height() < $(window).height()){
-						$('#container').append("<div class=\"fill\"  style=\"height:" + height2 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>");	
+						$('#container').append("<div class=\"fill\"  style=\"height:" + height2 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Nina</span></br></footer>");	
 					}else{						
-						$('#container').append("<div class=\"fill\"  style=\"height:" + height1 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); 	
+						$('#container').append("<div class=\"fill\"  style=\"height:" + height1 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Nina</span></br></footer>"); 	
 					}
 					};
 					setTimeout(addFooter, 800);
