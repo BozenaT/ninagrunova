@@ -6,6 +6,7 @@ html, body{
   background-color: White; 
 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 400; 
+   letter-spacing: 0.1em;
   font-style: normal;
   color: #7b7b7a;
   font-size: 12px;
