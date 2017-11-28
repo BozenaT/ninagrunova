@@ -97,6 +97,7 @@ $(document).ready(function() {
 	/* Apply fancybox to multiple items */
 	
 	$(".fancybox").fancybox({
+		type : "image",
 		tpl: {
 			closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
 		},
