@@ -216,7 +216,14 @@ audio{
 	background: url('imgs/closeCross.jpg') no-repeat;
 }
 
-
+@media only screen and (min-width: 0) and (max-width:500px)
+{
+			.container .image{
+			max-height:none;
+			width: 95%;
+		}
+	
+}
 
 @media only screen and (min-width: 0) and (max-width:730px)
 {
@@ -236,9 +243,7 @@ audio{
 			width:100%;
 		}
 		
-		.container .image{
-			height:50%;
-		}
+
 		
 		.container iframe{
 			width:80%;	
