@@ -121,8 +121,8 @@ text-align:center;
  }
 
 .container .image{
-    width: 645px;
-    height: auto;
+   width: auto;
+    max-height: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -205,7 +205,7 @@ audio{
 }
 
 .gallery a{
-	display: inline-block;
+	display: /*inline-*/block;
 }
 
 .myClose{
