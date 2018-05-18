@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 				//mobile button handler
 				$(window).resize(function() {
-				if ($(window).width() <= 730) {
+				if ($(window).width() <= 950) {
 				$('.mobile-menu-button').show();
 				$('#navside').hide();
 				}else{
