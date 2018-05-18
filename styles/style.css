@@ -276,7 +276,7 @@ audio{
 		}
 }
 
-@media only screen and (min-width: 900px) and (max-width:950px)
+/*@media only screen and (min-width: 900px) and (max-width:950px)
 {
 	
 	   .container p
@@ -313,7 +313,7 @@ audio{
 			margin-top: 5%; 
 		}
 }
-
+*/
 
 
 @media only screen and (min-width: 950px) and (max-width: 1400px)
