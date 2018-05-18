@@ -110,6 +110,7 @@ text-align:center;
  color:#424242;
  font-weight: 500;
  text-decoration: underline;
+line-height:120%;				  
  }
  
  h2  { 
@@ -121,8 +122,8 @@ text-align:center;
  }
 
 .container .image{
-   width: auto;
-    max-height: 500px;
+   width: 100%;
+    max-height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -216,14 +217,14 @@ audio{
 	background: url('imgs/closeCross.jpg') no-repeat;
 }
 
-@media only screen and (min-width: 0) and (max-width:500px)
+/*@media only screen and (min-width: 0) and (max-width:500px)
 {
 			.container .image{
 			max-height:none;
 			width: 95%;
 		}
 	
-}
+}*/
 
 @media only screen and (min-width: 0) and (max-width:730px)
 {
@@ -246,8 +247,8 @@ audio{
 
 		
 		.container iframe{
-			width:80%;	
-			height: 130px;
+			width: 100%;	
+			max-height: 250px;
 		}
 		
 		.container h1 {
@@ -289,8 +290,8 @@ audio{
 		}
 		
 		.container iframe{
-			width: 450px;
-			height: 320px;
+		width: 619px;
+		height: 348px;
 		}
 		
 		.container h1 {
@@ -329,12 +330,12 @@ audio{
 		}
 		
 		.container .image{
-			height: 30%;
+			width: 645px;
 		}
 		
 		.container iframe{
-			width: 450px;
-			height: 320px;
+			width: 645px;
+			height: 363px;
 		}
 
 		.nav>li {
@@ -378,8 +379,8 @@ audio{
 		}
 		
 		.container iframe{
-			width: 650px;
-			height: 420px;
+			width: 645px;
+
 		}
 
 		.nav>li {
