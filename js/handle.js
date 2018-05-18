@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 
 
-					if ($(window).width() <= 730) {
+					if ($(window).width() <= 950) {
 						$('#navside').hide();
 					}
 
